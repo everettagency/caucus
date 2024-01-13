@@ -1,0 +1,143 @@
+body {
+  background: rgb(13, 34, 63);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#coreDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+#locaterContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#inputOutputContainer {
+  width: 80vw;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+  padding: 10px 30px;
+}
+
+#searchForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchBox {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#searchBox input {
+background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-radius: 3px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    appearance: none;
+    text-transform: uppercase;
+}
+
+/*
+.input-container {
+  width: 100%; /* Full width for mobile and default */
+/*} *!*/
+
+.input-container input {
+  padding: 15px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  color: black;
+  background-color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+#submitButton {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: solid 2px white;
+  border-radius: 3px;
+  padding: 10px 30px;
+  cursor: pointer;
+  align-self: center;
+}
+
+#listBoxContainer {
+  display: none; /* Hidden by default */
+  background: white;
+  padding: 20px;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+/* Landscape orientation - Fields in a row */
+@media (orientation: landscape) {
+  #searchBox,
+  #searchForm {
+    flex-direction: row;
+    width: 80vw;
+     max-width: 600px;
+  }
+
+  .input-container {
+    width: calc(33.33% - 20px); /* Adjust width for landscape */
+  }
+}
+
+/* Portrait and Square orientation - Fields in a column */
+@media (orientation: portrait), (max-aspect-ratio: 1/1) {
+  #searchBox,
+  #searchForm {
+    flex-direction: column;
+  }
+
+  .input-container {
+    width: 100%; /* Full width for portrait and square */
+  }
+}
+
+/* Autocomplete Suggestions Styles */
+.autocomplete-suggestions {
+  position: absolute;
+  background: rgba(255, 255, 255, 1);
+  z-index: 5; /* Ensure it's above other elements */
+  width: auto; /* Adjusts based on content */
+  max-height: 30vh; /* Adjusts height as needed */
+  overflow-y: auto; /* Scroll for overflow */
+  display: none; /* Hidden by default */
+}
+
+.autocomplete-suggestion {
+  padding: 1vmin;
+  cursor: pointer;
+  text-align: center;
+}
+
+.autocomplete-suggestion:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,47 @@
+<html lang="en">
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vivek 2024 Caucus Locator</title>
+    <script src="caucus_script.js"></script>
+</header>
+
+<body>
+  <div id='coreDiv'>
+    <div id='locaterContainer'>
+      <div id='inputOutputContainer'>
+        <form id="searchForm">
+          <div id="searchBox">
+            <div class="input-container">
+              <input id="countyField" type="text" placeholder="County Name" list="countyList">
+              <datalist id="countyList">
+                <!-- County options will be dynamically populated here -->
+              </datalist>
+            </div>
+            <div class="input-container">
+              <input id="streetField" type="text" placeholder="Street Name" list="streetList">
+              <datalist id="streetList">
+                <!-- Street options will be dynamically populated here -->
+              </datalist>
+            </div>
+            <div class="input-container">
+              <input id="zipField" type="text" placeholder="Zip Code" list="zipList">
+              <datalist id="zipList">
+                <!-- Zip options will be dynamically populated here -->
+              </datalist>
+            </div>
+          </div>
+          <input id='submitButton' type='submit' value='Search'>
+        </form>
+
+        <div id='listBoxContainer' style='display: none'>
+          <div id='listBox'></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
